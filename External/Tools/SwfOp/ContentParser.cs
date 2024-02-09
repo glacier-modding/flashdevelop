@@ -90,6 +90,11 @@ namespace SwfOp
                     {
                         ExploreSWF(dataStream);
                     }
+                    // scaleform gfx (can parse it fine)
+                    else if (Filename.EndsWith(".gfx", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ExploreSWF(dataStream);
+                    }
                     else Errors.Add("Error: Not a supported filetype");
                 }
             }
